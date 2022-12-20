@@ -18,4 +18,4 @@ $tanggal_sewa = date('Y-m-d');
 mysqli_query($koneksi, "UPDATE sewa SET judul = '$judul', penyewa = '$penyewa', durasi = '$durasi' WHERE id = '$id'");
 
 // Setelah data-data telah berhasil diupdate kedalam database, kita kembalikan halamannya ke awal
-header('location: index.php');
+header('location: tabelSewa.php');

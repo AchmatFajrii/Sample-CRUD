@@ -15,5 +15,5 @@ $tanggal_sewa = date('Y-m-d');
 mysqli_query($koneksi, "INSERT INTO sewa (judul, penyewa, durasi, tanggal_sewa) VALUES ('$judul', '$penyewa', '$durasi', '$tanggal_sewa')");
 
 // Setelah data-data telah berhasil dimasukan kedalam database, kita kembalikan halamannya ke awal
-header('location: index.php');
+header('location: tabelSewa.php');
 ?>
