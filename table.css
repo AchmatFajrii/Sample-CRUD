@@ -1,0 +1,64 @@
+ *,
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 1400px;
+            margin: 0 auto;
+        }
+
+        .datatable {
+            display: flex;
+            margin-top: 50px;
+        }
+
+        .table {
+            margin-left: 60px;
+        }
+
+        table {
+            margin-top: 20px;
+        }
+
+        nav {
+            width: 100%;
+            height: 60px;
+            color: white;
+            background-color: #222222;
+            display: flex;
+            align-items: center;
+        }
+
+        .tambah-sewa {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background-color: green;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        td {
+            padding: 5px;
+            ;
+        }
+
+        .edit {
+            color: white;
+            background-color: orange;
+            padding: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .hapus {
+            color: white;
+            background-color: red;
+            padding: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+        }

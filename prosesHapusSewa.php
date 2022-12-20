@@ -18,4 +18,4 @@ $tanggal_sewa = date('Y-m-d');
 mysqli_query($koneksi, "DELETE FROM sewa WHERE id = '$id'");
 
 // Setelah data-data telah berhasil dihapus didalam database, kita kembalikan halamannya ke awal
-header('location: index.php');
+header('location: tabelSewa.php');

@@ -11,33 +11,7 @@ include_once('koneksi.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Penyewaan Buku</title>
-    <style>
-        *,
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .container{
-            width: 1400px;
-            margin: 0 auto;
-        }
-        .datatable{
-            display: flex;
-        }
-        .table{
-            margin-left: 20px;
-        }
-        nav {
-            width: 100%;
-            height: 60px;
-            color: white;
-            background-color:#222222;
-            display: flex;
-            align-items: center;
-        }
-    </style>
+    <link rel="stylesheet" href="table.css">
 </head>
 
 <body>
@@ -51,7 +25,7 @@ include_once('koneksi.php');
         <div class="datatable">
             <h1>Data Penyewaan Buku</h1>
             <div class="table">
-                <a href="formSewa.php">Tambah Sewa</a>
+                <a class="tambah-sewa" href="formSewa.php">Tambah Sewa</a>
                 <!-- Disini kita membuat table untuk memunculkan data-datanya pada halaman web yang merupakan fungsi read pada CRUD -->
                 <table border="1px">
                     <tr>
@@ -62,23 +36,23 @@ include_once('koneksi.php');
                         <td>Durasi</td>
                         <td>Action</td>
                     </tr>
-            
+
                     <!-- Lalu disini kita membuat query untuk membaca data yang ada didalam table sewa di database -->
                     <?php
                     $query = mysqli_query($koneksi, 'SELECT * FROM sewa');
-            
+
                     $no = 1;
                     while ($row = mysqli_fetch_array($query)) {
-            
+
                         echo "<tr>";
                         echo "<td>$no</td>";
                         echo "<td>$row[judul]</td>";
                         echo "<td>$row[penyewa]</td>";
                         echo "<td>$row[tanggal_sewa]</td>";
                         echo "<td>$row[durasi]</td>";
-                        echo "<td><a href='formEditSewa.php?id=$row[id]'>Edit</a>
-                                    <a href='prosesHapusSewa.php?id=$row[id]'>Hapus</a></td>";
-            
+                        echo "<td><a class='edit' href='formEditSewa.php?id=$row[id]'>Edit</a>
+                                    <a class='hapus' href='prosesHapusSewa.php?id=$row[id]'>Hapus</a></td>";
+
                         $no++;
                     }
                     ?>
